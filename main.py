@@ -78,6 +78,51 @@ if page == "Register / Login":
             else:
                 st.error("Invalid login.")
 
+    # ---------- Mock P2P ขายฝาก Deals ----------
+    st.markdown("---")
+    st.subheader("📌 Example P2P ขายฝาก Deals")
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.image("https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+                 caption="The River Condo", use_column_width=True)
+        st.markdown("💰 วงเงิน: 1,000,000 บาท")
+        st.markdown("📈 ดอกเบี้ย: 12% ต่อปี")
+        st.markdown("🕑 ระยะเวลา: 24 เดือน")
+        st.progress(0.5)
+        st.caption("Funding: 500k / 1M")
+        if st.button("View Deal 1"):
+            st.session_state["page"] = "Contract Management"
+            st.experimental_rerun()
+
+    with col2:
+        st.image("https://images.unsplash.com/photo-1501183638710-841dd1904471",
+                 caption="Sukhumvit Condo", use_column_width=True)
+        st.markdown("💰 วงเงิน: 2,000,000 บาท")
+        st.markdown("📈 ดอกเบี้ย: 10% ต่อปี")
+        st.markdown("🕑 ระยะเวลา: 36 เดือน")
+        st.progress(0.7)
+        st.caption("Funding: 1.4M / 2M")
+        if st.button("View Deal 2"):
+            st.session_state["page"] = "Contract Management"
+            st.experimental_rerun()
+
+    with col3:
+        st.image("https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+                 caption="บ้านเดี่ยว รามอินทรา", use_column_width=True)
+        st.markdown("💰 วงเงิน: 3,500,000 บาท")
+        st.markdown("📈 ดอกเบี้ย: 9% ต่อปี")
+        st.markdown("🕑 ระยะเวลา: 48 เดือน")
+        st.progress(0.3)
+        st.caption("Funding: 1.05M / 3.5M")
+        if st.button("View Deal 3"):
+            st.session_state["page"] = "Contract Management"
+            st.experimental_rerun()
+
+    st.markdown("---")
+    st.info("💡 ตัวอย่างดีลขายฝากแสดง วงเงิน ดอกเบี้ย ระยะเวลา และ Funding Progress เพื่อให้นักลงทุนตัดสินใจได้ง่าย")
+
 # 2. Property Registration
 elif page == "Property Registration":
     require_login()
